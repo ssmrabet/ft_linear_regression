@@ -5,7 +5,7 @@ def	readFile(fileName):
 	data = pd.read_csv(fileName)
 	return data["km"], data["price"]
 
-def     writeFile(theta0, theta1):
+def writeFile(theta0, theta1):
 	data = pd.DataFrame({"theta0": [theta0], "theta1": [theta1]})
 	data.to_csv("theta.csv")
 
@@ -92,7 +92,7 @@ def	main():
 	y_pred = tab_h_theta(theta0, theta1, x)
 	# Evaluate the performance of the algorithm
 	result = rmse(y, y_pred, len(x))
-	print("Root Mean Squared Error (RMSE) = {:.10f}".format(result))
+	print("Root Mean Square Error (RMSE) = {:.10f}".format(result))
 	# Save in file
 	writeFile(theta0, theta1)	
 	# Graphics
