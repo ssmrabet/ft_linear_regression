@@ -1,2 +1,2 @@
 # ft_linear_regression
-Une introduction au machine learning
+Linear regression : Gradient descent algorithm
